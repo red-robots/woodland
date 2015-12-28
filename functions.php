@@ -63,13 +63,13 @@ function acstarter_setup() {
 	 * Enable support for Post Formats.
 	 * See https://developer.wordpress.org/themes/functionality/post-formats/
 	 */
-	add_theme_support( 'post-formats', array(
-		'aside',
-		'image',
-		'video',
-		'quote',
-		'link',
-	) );
+	// add_theme_support( 'post-formats', array(
+	// 	'aside',
+	// 	'image',
+	// 	'video',
+	// 	'quote',
+	// 	'link',
+	// ) );
 
 	// Set up the WordPress core custom background feature.
 	add_theme_support( 'custom-background', apply_filters( 'acstarter_custom_background_args', array(
@@ -111,20 +111,9 @@ function acstarter_widgets_init() {
 add_action( 'widgets_init', 'acstarter_widgets_init' );
 
 /**
- * Enqueue scripts and styles.
+ * Implement the Custom Header feature.
  */
-function acstarter_scripts() {
-	wp_enqueue_style( 'acstarter-style', get_stylesheet_uri() );
-
-	wp_enqueue_script( 'acstarter-navigation', get_template_directory_uri() . '/js/navigation.js', array(), '20120206', true );
-
-	wp_enqueue_script( 'acstarter-skip-link-focus-fix', get_template_directory_uri() . '/js/skip-link-focus-fix.js', array(), '20130115', true );
-
-	if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
-		wp_enqueue_script( 'comment-reply' );
-	}
-}
-add_action( 'wp_enqueue_scripts', 'acstarter_scripts' );
+require get_template_directory() . '/inc/scripts.php';
 
 /**
  * Implement the Custom Header feature.
@@ -144,7 +133,7 @@ require get_template_directory() . '/inc/extras.php';
 /**
  * Customizer additions.
  */
-require get_template_directory() . '/inc/customizer.php';
+// require get_template_directory() . '/inc/customizer.php';
 
 /**
  * Load Jetpack compatibility file.
