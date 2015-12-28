@@ -72,6 +72,11 @@ Nicolas Gallagher and Jonathan Neal http://necolas.github.com/normalize.css/
 @import "navigation/navigation";
 
 /*--------------------------------------------------------------
+# Pagigation
+--------------------------------------------------------------*/
+@import "navigation/pagination";
+
+/*--------------------------------------------------------------
 # Accessibility
 --------------------------------------------------------------*/
 @import "modules/accessibility";
@@ -85,6 +90,16 @@ Nicolas Gallagher and Jonathan Neal http://necolas.github.com/normalize.css/
 # Clearings
 --------------------------------------------------------------*/
 @import "modules/clearings";
+
+/*--------------------------------------------------------------
+# Colorbox
+--------------------------------------------------------------*/
+@import "modules/colobox";
+
+/*--------------------------------------------------------------
+# Flexslider
+--------------------------------------------------------------*/
+@import "modules/flexslider";
 
 /*--------------------------------------------------------------
 # Widgets
