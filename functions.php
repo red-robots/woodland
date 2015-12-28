@@ -131,6 +131,11 @@ require get_template_directory() . '/inc/template-tags.php';
 require get_template_directory() . '/inc/extras.php';
 
 /**
+ * Theme Specific additions.
+ */
+require get_template_directory() . '/inc/theme.php';
+
+/**
  * Customizer additions.
  */
 // require get_template_directory() . '/inc/customizer.php';
