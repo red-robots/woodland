@@ -1,14 +1,17 @@
 $size__site-main: 100%;
 $size__site-sidebar: 25%;
+$mobwidth: 600px;
+$midwidth: 900px;
+$deskwidth: 1200px;
 
 .wrapper {
 	width: 100%;
 	margin: 0px auto;
 	padding: 20px;
-	@media screen and (min-width: 600px) {
+	@media screen and (min-width: $mobwidth) {
 		width: 100%;
 	}
-	@media screen and (min-width: 1200px) {
+	@media screen and (min-width: $deskwidth) {
 		width: 1200px;
 		padding: 0px;
 	}
@@ -17,12 +20,12 @@ $size__site-sidebar: 25%;
 .content-area {
 	width: 100%;
 	margin: 0px auto;
-	@media screen and (min-width: 600px) {
+	@media screen and (min-width: $mobwidth) {
 		width: 66%;
 		float: left;
 		margin: 0;
 	}
-	@media screen and (min-width: 1200px) {
+	@media screen and (min-width: $deskwidth) {
 		/*width: 1200px;*/
 	}
 }
@@ -30,12 +33,44 @@ $size__site-sidebar: 25%;
 .widget-area {
 	width: 100%;
 	margin: 0px auto;
-	@media screen and (min-width: 600px) {
+	@media screen and (min-width: $mobwidth) {
 		width: 26%;
 		float: right;
 		margin: 0;
 	}
-	@media screen and (min-width: 1200px) {
+	@media screen and (min-width: $deskwidth) {
+		/*width: 1200px;*/
+	}
+}
+
+/* Logo */
+.logo , h1.logo {
+	width: 300px;
+	height: 200px;
+	background-image: url(images/logo.png);	
+	margin: 10px auto;
+
+	@media screen and (min-width: $mobwidth) {
+		width: 300px;
+		height: 200px;
+		float: left;
+		margin: 0;
+	}
+	@media screen and (min-width: $deskwidth) {
+		/*width: 1200px;*/
+	}
+}
+.logo a, h1.logo a {
+	width: 300px;
+	height: 200px;
+	display: block;
+	text-indent: -9000px;
+
+	@media screen and (min-width: $mobwidth) {
+		width: 300px;
+		height: 200px;
+	}
+	@media screen and (min-width: $deskwidth) {
 		/*width: 1200px;*/
 	}
 }
