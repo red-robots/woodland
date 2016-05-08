@@ -1,9 +1,21 @@
 /* Pagination
 -------------------------------------------------------------- */
-.pagi {
-	bottom: -50px;
-	left: 125px;
-	position: absolute;	
+.navigation {
+	width: 100%;
+	margin: 20px 0 30px 0;
+	clear: both;
+	float: left;
+
+	& ul {
+		margin: 0;
+		padding: 0;
+	}
+
+	& li {
+		margin: 0;
+		display: inline;
+		list-style: none;
+	}
 }
 .navigation li a,
 .navigation li a:hover,
@@ -11,10 +23,6 @@
 .navigation li.disabled {
 	color: #fff;
 	text-decoration:none;
-}
- 
-.navigation li {
-	display: inline;
 }
  
 .navigation li a,
@@ -26,6 +34,7 @@
 	cursor: pointer;
 	padding: 12px;
 	padding: 0.75rem;
+	@include transition(.3s ease all);
 }
  
 .navigation li a:hover,
