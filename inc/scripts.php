@@ -24,6 +24,11 @@ function acstarter_scripts() {
 			array(), '20120206', 
 			true 
 		);
+	wp_enqueue_script(
+		'acstarter-font-awesome',
+		'https://use.fontawesome.com/4945cee666.js',
+		array(), '20170413'
+	);
 
 	// wp_enqueue_script( 
 	// 		'acstarter-flexslider', 
