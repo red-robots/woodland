@@ -15,7 +15,7 @@
                 echo $copy;
             endif;?>
         </div><!--.copy-->
-        <img src="<?php echo get_template_directory_uri()."/images/divot.png";?>" alt="">
+        <img class="divot" src="<?php echo get_template_directory_uri()."/images/divot.png";?>" alt="">
     </div><!--.row-1-->
     <div class="row-2">
         <div class="row-1">
@@ -24,7 +24,7 @@
             </div><!--.row-1-->
 	        <?php $copy = get_field("row_2_copy");
 	        if($copy):?>
-                <div class="row-2">
+                <div class="row-2 copy">
                     <?php echo $copy;?>
                 </div><!--.row-2-->
 	        <?php endif;?>
@@ -42,11 +42,11 @@
                 <?php while($query->have_posts()):$query->the_post();?>
 	                <?php $image = get_field("home_background_image");?>
                     <div class="outer-wrapper" <?php if($image): echo 'style="background-image: url('.$image['url'].');"'; endif;?>>
-                        <div class="inner-wrapper">
-                            <a href="<?php echo get_the_permalink();?>">
-				                <?php the_title();?>
-                            </a>
-                        </div><!--.inner-wrapper-->
+                        <a href="<?php echo get_the_permalink();?>">
+                            <div class="inner-wrapper">
+                                <?php the_title();?>
+                            </div><!--.inner-wrapper-->
+                        </a>
                     </div><!--.outer-wrapper-->
                 <?php endwhile;?>
             </div><!--.row-2-->
@@ -62,7 +62,7 @@
 		        echo $copy;
 	        endif;?>
         </div><!--.copy-->
-        <img src="<?php echo get_template_directory_uri()."/images/divot.png";?>" alt="">
+        <img class="divot" src="<?php echo get_template_directory_uri()."/images/divot.png";?>" alt="">
     </div><!--.row-3-->
     <div class="row-4">
         <div class="row-1 circle">
@@ -91,6 +91,7 @@
                     <div class="row-1">
                         <?php echo $title;?>
                     </div><!--.row-1-->
+                    <div class="spacer"></div><!--.spacer-->
                 <?php endif;?>
                 <?php if($copy):?>
                     <div class="row-2">
@@ -111,11 +112,11 @@
             <div class="row-2">
                 <?php while($query->have_posts()):$query->the_post();?>
                     <div class="outer-wrapper">
-                        <div class="inner-wrapper">
-                            <a href="<?php echo get_the_permalink();?>">
+                        <a href="<?php echo get_the_permalink();?>">
+                            <div class="inner-wrapper">
                                 <?php the_title();?>
-                            </a>
-                        </div><!--.inner-wrapper-->
+                            </div><!--.inner-wrapper-->
+                        </a>
                     </div><!--.outer-wrapper-->
                 <?php endwhile;?>
             </div><!--.row-2-->

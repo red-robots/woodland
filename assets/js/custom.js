@@ -65,14 +65,7 @@ jQuery(document).ready(function ($) {
 	    return false;
 	});
 
-	/*
-	*
-	*	Nice Page Scroll
-	*
-	------------------------------------*/
-	$(function(){	
-		$("html").niceScroll();
-	});
+
 	
 	
 	/*
@@ -89,4 +82,12 @@ jQuery(document).ready(function ($) {
 	------------------------------------*/
 	new WOW().init();
 
+	$('#masthead .search').click(function(){
+	   var $row_2 = $('#masthead >.row-1 >.col-2 >.row-2');
+	   if($row_2.hasClass("toggled-on")){
+	       $row_2.removeClass("toggled-on");
+       } else {
+	       $row_2.addClass("toggled-on");
+       }
+    });
 });// END #####################################    END

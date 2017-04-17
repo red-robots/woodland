@@ -57,3 +57,337 @@
     }
   }
 }
+#masthead {
+  >.row-1 {
+    @include flexbox;
+    @include flexbox-direction(column);
+    @include flexbox-align-content(center);
+    @include flexbox-align-items(center);
+    @include flexbox-justify(center);
+    width: 100%;
+    padding: 20px;
+    @media screen and (min-width: $tabwidth){
+      @include flexbox-direction(row);
+      @include flexbox-justify(space-between);
+      padding: 2% 5% 3% 5%;
+    }
+    >.col-1 {
+      @include flexbox-flex(0,1,auto);
+      width: 80%;
+      @media screen and (min-width: $tabwidth){
+        width: 35%;
+      }
+      .logo {
+        img {
+          width: 100%;
+        }
+      }
+    }
+    >.col-2 {
+      @include flexbox-flex(0,1,auto);
+      >.row-1 {
+        text-align: center;
+        .menu-header-container {
+          vertical-align: middle;
+          text-align: center;
+          @media screen and (min-width: $tabwidth) {
+            display: inline-block;
+          }
+          ul#header-menu {
+            margin: 0;
+            padding: 0;
+            li {
+              display: block;
+              list-style-type: none;
+              font-size: 18px;
+              color: $color__woodland-blue;
+              @media screen and (min-width: $tabwidth){
+                font-size: 20px;
+                display: inline-block;
+              }
+              @media screen and (min-width: $deskwidth){
+                font-size: 28px;
+              }
+              &:first-child {
+                a {
+                  &:before {
+                    display: none;
+                  }
+                }
+              }
+              a {
+                text-decoration: none;
+                color: inherit;
+                &:before {
+                  content: "|";
+                  display: none;
+                  margin: 0 8px;
+                  @media screen and (min-width: $tabwidth){
+                    display: inline-block;
+                  }
+                }
+                &:hover {
+                  text-decoration: none;
+                  color:inherit;
+                }
+              }
+            }
+          }
+        }
+        .search {
+          vertical-align: middle;
+          font-size: 15px;
+          color: $color__woodland-grey;
+          width: 40px;
+          height: 40px;
+          background-color: $color__woodland-light-grey;
+          border: 1px solid $color__woodland-medium-grey;
+          border-radius: 50%;
+          padding: 8px;
+          text-align: center;
+          margin: 10px auto 0 auto;
+          @media screen and (min-width: $tabwidth){
+            font-size: 20px;
+            height: 50px;
+            width: 50px;
+            display: inline-block;
+            margin: 0 0 0 10px;
+          }
+          i {
+            line-height: 1;
+          }
+        }
+      }
+      >.row-2 {
+        text-align: center;
+        display: none;
+        &.toggled-on {
+          display: block;
+        }
+        form {
+          input[type=search] {
+            margin-top: 10px;
+            font-size: 20px;
+            color: $color__woodland-blue;
+            border: 1px solid $color__woodland-blue;
+            border-radius: 3px;
+            width: 100%;
+            padding: 5px;
+            line-height: 1.5;
+            @media screen and (min-width: $tabwidth){
+              width: auto;
+            }
+          }
+          input[type=submit] {
+            margin-top: 10px;
+            border: 1px solid $color__woodland-blue;
+            border-radius: 3px;
+            text-shadow: none;
+            box-shadow: none;
+            font-size: 20px;
+            padding: 5px;
+            line-height: 1.5;
+            color: white;
+            background-color: $color__woodland-blue;
+            text-transform: uppercase;
+          }
+        }
+      }
+    }
+  }
+  >.row-2 {
+    border-top: 8px solid $color__woodland-blue;
+    background-color: $color__woodland-grey;
+    padding: 20px;
+    @media screen and (min-width: $tabwidth) {
+      padding: 10px 4.5% 20px 4.5%;
+    }
+    nav#site-navigation {
+      &.toggled {
+        .menu-primary-container {
+          display: block;
+        }
+      }
+      button {
+        display: block;
+        margin: 0 auto;
+        border: none;
+        text-shadow: none;
+        box-shadow: none;
+        font-size: 20px;
+        color: white;
+        background-color: $color__woodland-blue;
+        text-transform: uppercase;
+        @media screen and (min-width: $tabwidth){
+          display: none;
+        }
+      }
+      .menu-primary-container {
+        display: none;
+        margin: 10px 0 0 0;
+        @media screen and (min-width: $tabwidth){
+          display: block;
+          margin: 0;
+        }
+        ul#primary-menu {
+          margin: 0;
+          padding: 0;
+          @include flexbox;
+          @include flexbox-direction(column);
+          @include flexbox-align-content(center);
+          @include flexbox-align-items(center);
+          @include flexbox-justify(center);
+          @include flexbox-wrap(wrap);
+          width: 100%;
+          @media screen and (min-width: $tabwidth){
+            display: block;
+            text-align: center;
+          }
+          @media screen and (min-width: $widewidth){
+            @include flexbox;
+            @include flexbox-direction(row);
+            @include flexbox-justify(space-between);
+          }
+          li {
+            @include flexbox-flex(0,1,auto);
+            color: white;
+            font-size: 20px;
+            list-style-type: none;
+            display: block;
+            @media screen and (min-width: $tabwidth){
+              font-size: 22px;
+              margin: 0 10px;
+              display: inline-block;
+            }
+            @media screen and (min-width: $widewidth) {
+              font-size: 30px;
+              display: block;
+            }
+            a {
+              text-decoration: none;
+              color: inherit;
+              text-transform: uppercase;
+              &:hover {
+                text-decoration: none;
+                color: inherit;
+              }
+            }
+            &.sub-menu {
+
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+#colophon {
+  background-color: $color__woodland-blue;
+  padding: 20px;
+  @media screen and (min-width: $tabwidth) {
+    padding: 2% 5% 4% 5%;
+  }
+  >.row-1 {
+    @include flexbox;
+    @include flexbox-align-content(center);
+    @include flexbox-align-items(center);
+    @include flexbox-direction(row);
+    @include flexbox-justify(space-between);
+    margin: 0 auto 30px auto;
+    width: 200px;
+    a {
+      display: block;
+      color: white;
+      text-decoration: none;
+      font-size: 32px;
+      &:hover {
+        color: white;
+        text-decoration: none;
+      }
+      i {
+
+      }
+    }
+  }
+  >.row-2 {
+    @include flexbox;
+    @include flexbox-direction(column);
+    @include flexbox-align-content(center);
+    @include flexbox-align-items(center);
+    @include flexbox-justify(center);
+    width: 100%;
+    text-align: center;
+    color: white;
+    @media screen and (min-width: $tabwidth){
+      @include flexbox-direction(row);
+      @include flexbox-justify(space-between);
+      @include flexbox-align-content(flex-start);
+      @include flexbox-align-items(flex-start);
+      text-align: left;
+    }
+    >.col-1 {
+      h2 {
+        margin: 0;
+        font-size: 22px;
+      }
+      .name {
+
+      }
+      .address-1 {
+
+      }
+      .address-2 {
+
+      }
+      .map {
+        margin-top:20px;
+        a {
+          color: inherit;
+          text-decoration: none;
+          &:hover {
+            color: inherit;
+            text-decoration: none;
+          }
+        }
+      }
+      .phone {
+        a {
+          color: inherit;
+          text-decoration: none;
+          &:hover {
+            color: inherit;
+            text-decoration: none;
+          }
+        }
+      }
+    }
+    >.col-2 {
+      margin-top: 20px;
+      @media screen and (min-width: $tabwidth){
+        margin-top: 0;
+      }
+      h2 {
+        margin: 0;
+        font-size: 22px;
+      }
+      .menu-footer-container {
+        ul#footer-menu {
+          margin: 0;
+          padding: 0;
+          li {
+            display: block;
+            a {
+              color: inherit;
+              text-decoration: none;
+              &:hover {
+                color: inherit;
+                text-decoration: none;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
