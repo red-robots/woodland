@@ -1,6 +1,6 @@
 .copy {
   font-size: 15px;
-  color: black;
+  color: $color__text-main;
   @media screen and (min-width: $tabwidth){
     font-size: 18px;
   }
@@ -29,7 +29,7 @@
   h1, h2, h3 {
     margin: 0 0 10px 0;
     text-transform: uppercase;
-    color: black;
+    color: $color__text-main;
   }
   h1 {
     font-size: 30px;

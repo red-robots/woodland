@@ -10,16 +10,18 @@
 ?>
 
 <article id="post-<?php the_ID(); ?>" <?php post_class("template-page"); ?>>
-	<?php $image = get_field("row_1_image");?>
-    <div class="row-1" <?php if($image): echo 'style="background-image: url('.$image['url'].');"'; endif;?>>
-        <div class="copy">
-			<?php $copy = get_field("row_1_copy");
-			if($copy):
-				echo $copy;
-			endif;?>
-        </div><!--.copy-->
-        <img src="<?php echo get_template_directory_uri()."/images/divot.png";?>" alt="">
-    </div><!--.row-1-->
+	<?php $image = get_field("row_1_image");
+	if($image):?>
+        <div class="row-1" <?php if($image): echo 'style="background-image: url('.$image['url'].');"'; endif;?>>
+            <?php $copy = get_field("row_1_copy");
+            if($copy):?>
+                <div class="copy">
+                    <?php echo $copy;?>
+                </div><!--.copy-->
+            <?php endif;?>
+            <img class="divot" src="<?php echo get_template_directory_uri()."/images/divot.png";?>" alt="">
+        </div><!--.row-1-->
+    <?php endif;?>
     <div class="row-2">
         <h1><?php the_title();?></h1>
         <?php if(get_the_content()):?>
@@ -38,12 +40,13 @@
 	    if($query->have_posts()):?>
             <div class="sub-pages">
 			    <?php while($query->have_posts()):$query->the_post();?>
-                    <div class="outer-wrapper">
-                        <div class="inner-wrapper">
-                            <a href="<?php echo get_the_permalink();?>">
-							    <?php the_title();?>
-                            </a>
-                        </div><!--.inner-wrapper-->
+				    <?php $image = get_field("sub_background_image");?>
+                    <div class="outer-wrapper" <?php if($image): echo 'style="background-image: url('.$image['url'].');"'; endif;?>>
+                        <a href="<?php echo get_the_permalink();?>">
+                            <div class="inner-wrapper">
+                                <?php the_title();?>
+                            </div><!--.inner-wrapper-->
+                        </a>
                     </div><!--.outer-wrapper-->
 			    <?php endwhile;?>
             </div><!--.row-2-->
