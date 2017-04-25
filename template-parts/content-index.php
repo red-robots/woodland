@@ -60,7 +60,7 @@
 	if($image):?>
         <div class="row-3" <?php if($image): echo 'style="background-image: url('.$image['url'].');"'; endif;?>>
             <div class="copy">
-                <?php $copy = get_field("row_1_copy");
+                <?php $copy = get_field("row_3_copy");
                 if($copy):
                     echo $copy;
                 endif;?>
