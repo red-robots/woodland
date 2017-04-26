@@ -309,7 +309,7 @@
     }
   }
 }
-.template-page {
+.template-page, .error-404, .template-sitemap {
   >.row-1 {
     background-size: cover;
     background-position: center;
@@ -348,11 +348,7 @@
       }
     }
     .copy {
-      font-size: 15px;
-      font-weight: 300;
-      @media screen and (min-width: $tabwidth) {
-        font-size: 18px;
-      }
+      margin-top: 10px;
     }
     >.sub-pages {
       margin-top: 30px;

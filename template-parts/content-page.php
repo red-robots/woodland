@@ -12,7 +12,7 @@
 <article id="post-<?php the_ID(); ?>" <?php post_class("template-page"); ?>>
 	<?php $image = get_field("row_1_image");
 	if($image):?>
-        <div class="row-1" <?php if($image): echo 'style="background-image: url('.$image['url'].');"'; endif;?>>
+        <div class="row-1 row-banner" <?php if($image): echo 'style="background-image: url('.$image['url'].');"'; endif;?>>
             <?php $copy = get_field("row_1_copy");
             if($copy):?>
                 <div class="copy">

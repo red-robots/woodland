@@ -1,8 +1,9 @@
 .copy {
   font-size: 16px;
   color: $color__text-main;
+  font-weight: 300;
   @media screen and (min-width: $tabwidth){
-    font-size: 18px;
+    font-size: 22px;
   }
   > *:first-child {
     margin-top: 0;
@@ -13,21 +14,21 @@
     padding-bottom: 0;
   }
   p {
-    margin: 10px 0;
+    margin: 20px 0;
   }
   strong, b, em {
     font-weight: 800;
   }
   a {
     text-decoration: none;
-    color: black;
+    color: $color__text-main;
     position: relative;
     &:hover {
-      color: black;
+      color: $color__text-main;
     }
   }
   h1, h2, h3 {
-    margin: 0 0 10px 0;
+    margin: 0 0 20px 0;
     text-transform: uppercase;
     color: $color__text-main;
   }
@@ -42,7 +43,7 @@
   }
   ul, ol {
     padding: 0;
-    margin: 0 0 10px 10px;
+    margin: 0 0 20px 20px;
     font-size: inherit;
     li {
       margin: 0 0 0 20px;
