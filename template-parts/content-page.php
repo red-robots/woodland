@@ -44,7 +44,9 @@
                     <div class="outer-wrapper" <?php if($image): echo 'style="background-image: url('.$image['url'].');"'; endif;?>>
                         <a href="<?php echo get_the_permalink();?>">
                             <div class="inner-wrapper">
-                                <?php the_title();?>
+                                <span>
+                                    <?php the_title();?>
+                                </span>
                             </div><!--.inner-wrapper-->
                         </a>
                     </div><!--.outer-wrapper-->

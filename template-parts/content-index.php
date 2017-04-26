@@ -46,7 +46,9 @@
                     <div class="outer-wrapper" <?php if($image): echo 'style="background-image: url('.$image['url'].');"'; endif;?>>
                         <a href="<?php echo get_the_permalink();?>">
                             <div class="inner-wrapper">
-                                <?php the_title();?>
+                                <span>
+                                    <?php the_title();?>
+                                </span>
                             </div><!--.inner-wrapper-->
                         </a>
                     </div><!--.outer-wrapper-->
@@ -81,7 +83,9 @@
         <?php $video = get_field("row_4_video");
         if($video):?>
             <div class="row-3">
-
+                <div class="iframe-wrapper">
+                    <?php echo $video;?>
+                </div><!--.iframe-wrapper-->
             </div><!--.row-3-->
         <?php endif;?>
     </div><!--.row-4-->

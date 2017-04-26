@@ -13,7 +13,7 @@
       font-weight: 800;
       text-shadow: 3px 3px 20px black;
       @media screen and (min-width: $tabwidth) {
-        font-size: 60px;
+        font-size: 40px;
       }
     }
     img.divot {
@@ -49,7 +49,7 @@
         font-size: 25px;
         @media screen and (min-width: $tabwidth) {
           margin-top: 3%;
-          font-size: 40px;
+          font-size: 30px;
         }
       }
     }
@@ -62,13 +62,12 @@
       @include flexbox-justify(center);
       width: 100%;
       @media screen and (min-width: $tabwidth){
-        margin-top: 0;
-        display: block;
-      }
-      @media screen and (min-width: $widewidth){
         margin-top: 3%;
-        @include flexbox;
         @include flexbox-direction(row);
+        @include flexbox-justify(center);
+        @include flex-wrap(wrap);
+      }
+      @media screen and (min-width: $deskwidth){
         @include flexbox-justify(space-between);
       }
       .outer-wrapper {
@@ -81,22 +80,23 @@
         }
         @media screen and (min-width: $tabwidth){
           min-width: 200px;
-          width: 1/3*92%;
-          display: inline-block;
-          margin: 3% 10px 0 10px;
+          margin: 2.5% 1/4*5% 0 1/4*5%;
+          width: 1/2*95%;
           &:first-child {
-            margin: 3% 10px 0 10px;
+            margin: 2.5% 1/4*5% 0 1/4*5%;
           }
         }
-        @media screen and (min-width: $widewidth){
-          margin: 0;
+        @media screen and (min-width: $deskwidth){
+          width: 1/3*92%;
+          margin: 4% 0 0 0;
           &:first-child {
-            margin: 0;
+            margin: 4% 0 0 0;
           }
         }
         a {
           display: block;
           color: inherit;
+          height: 100%;
           padding: 20px;
           background-color: rgba(0,0,0,0.5);
           text-decoration: none;
@@ -105,16 +105,25 @@
             text-decoration: none;
           }
           .inner-wrapper {
+            @include flexbox;
+            @include flexbox-direction(row);
+            @include flexbox-align-content(center);
+            @include flexbox-align-items(center);
+            @include flexbox-justify(center);
             border: 1px solid white;
             color: white;
-            font-size: 25px;
+            height: 100%;
+            font-size: 20px;
             text-transform: uppercase;
             padding: 40% 0;
             @media screen and (min-width: $tabwidth) {
-              font-size: 30px;
+              font-size: 25px;
             }
             @media screen and (min-width: $widewidth) {
-              font-size: 40px;
+              font-size: 30px;
+            }
+            span {
+              display: block;
             }
           }
         }
@@ -134,7 +143,7 @@
       font-size: 25px;
       font-weight: 800;
       @media screen and (min-width: $tabwidth) {
-        font-size: 60px;
+        font-size: 40px;
       }
     }
     img.divot {
@@ -169,13 +178,29 @@
       font-size: 25px;
       @media screen and (min-width: $tabwidth) {
         margin-top: 3%;
-        font-size: 40px;
+        font-size: 30px;
       }
     }
     >.row-3 {
-      margin-top: 30px;
+      margin: 30px 0 0 0;
       @media screen and (min-width: $tabwidth) {
-        margin-top: 5%;
+        margin: 5% auto 0 auto;
+        width: 70%;
+      }
+      @media screen and (min-width: $deskwidth) {
+        width: 50%;
+      }
+      .iframe-wrapper {
+        position: relative;
+        padding-bottom: 56.25%;
+        iframe {
+          position: absolute;
+          top: 0;
+          left: 0;
+          width: 100%;
+          height: 100%;
+          max-width: 100%;
+        }
       }
     }
   }
@@ -190,10 +215,10 @@
         color: white;
         font-size: 25px;
         @media screen and (min-width: $tabwidth) {
-          font-size: 50px;
+          font-size: 30px;
         }
         @media screen and (min-width: $widewidth) {
-          font-size: 60px;
+          font-size: 40px;
         }
       }
       >.spacer {
@@ -209,10 +234,10 @@
       >.row-2 {
         margin-top: 20px;
         color: white;
-        font-size: 25px;
+        font-size: 20px;
         @media screen and (min-width: $tabwidth) {
           margin-top: 2%;
-          font-size: 40px;
+          font-size: 25px;
         }
       }
     }
@@ -269,14 +294,14 @@
           }
           .inner-wrapper {
             color: white;
-            font-size: 25px;
+            font-size: 20px;
             background-color: rgba(255,255,255,0.4);
             padding: 10px;
             @media screen and (min-width: $tabwidth) {
-              font-size: 30px;
+              font-size: 25px;
             }
             @media screen and (min-width: $widewidth) {
-              font-size: 40px;
+              font-size: 30px;
             }
           }
         }
@@ -299,7 +324,7 @@
       font-weight: 800;
       text-shadow: 3px 3px 20px black;
       @media screen and (min-width: $tabwidth) {
-        font-size: 60px;
+        font-size: 40px;
       }
     }
     img.divot {
@@ -310,7 +335,6 @@
     }
   }
   >.row-2 {
-
     padding: 20px;
     @media screen and (min-width: $tabwidth) {
       padding: 3% 5% 8% 5%;
@@ -318,16 +342,16 @@
     h1 {
       text-transform: uppercase;
       margin: 0;
-      font-size: 35px;
+      font-size: 30px;
       @media screen and (min-width: $tabwidth) {
-        font-size: 55px;
+        font-size: 40px;
       }
     }
     .copy {
-      font-size: 20px;
+      font-size: 15px;
       font-weight: 300;
       @media screen and (min-width: $tabwidth) {
-        font-size: 30px;
+        font-size: 18px;
       }
     }
     >.sub-pages {
@@ -340,14 +364,14 @@
       text-align: center;
       width: 100%;
       @media screen and (min-width: $tabwidth){
-        margin-top: 0;
-        display: block;
-      }
-      @media screen and (min-width: $widewidth){
         margin-top: 10%;
-        @include flexbox;
         @include flexbox-direction(row);
+        @include flexbox-justify(center);
+        @include flex-wrap(wrap);
+      }
+      @media screen and (min-width: $deskwidth){
         @include flexbox-justify(space-between);
+
       }
       .outer-wrapper {
         width: 100%;
@@ -359,21 +383,22 @@
         }
         @media screen and (min-width: $tabwidth){
           min-width: 200px;
-          width: 1/3*92%;
-          display: inline-block;
-          margin: 10% 10px 0 10px;
+          margin: 2.5% 1/4*5% 0 1/4*5%;
+          width: 1/2*95%;
           &:first-child {
-            margin: 10% 10px 0 10px;
+            margin: 2.5% 1/4*5% 0 1/4*5%;
           }
         }
-        @media screen and (min-width: $widewidth){
-          margin: 0;
+        @media screen and (min-width: $deskwidth){
+          width: 1/3*92%;
+          margin: 4% 0 0 0;
           &:first-child {
-            margin: 0;
+            margin: 4% 0 0 0;
           }
         }
         a {
           display: block;
+          height: 100%;
           color: inherit;
           padding: 20px;
           background-color: rgba(0,0,0,0.5);
@@ -383,16 +408,25 @@
             text-decoration: none;
           }
           .inner-wrapper {
+            @include flexbox;
+            @include flexbox-direction(row);
+            @include flexbox-align-content(center);
+            @include flexbox-align-items(center);
+            @include flexbox-justify(center);
             border: 1px solid white;
             color: white;
-            font-size: 25px;
+            height: 100%;
+            font-size: 20px;
             text-transform: uppercase;
             padding: 40% 0;
             @media screen and (min-width: $tabwidth) {
-              font-size: 30px;
+              font-size: 25px;
             }
             @media screen and (min-width: $widewidth) {
-              font-size: 40px;
+              font-size: 30px;
+            }
+            span {
+              display: block;
             }
           }
         }
