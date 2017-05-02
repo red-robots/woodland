@@ -29,24 +29,49 @@
                 <?php the_content();?>
             </div><!--.copy-->
         <?php endif;?>
-	    <?php $args = array(
+	    <?php $id = get_the_ID();
+	    $parent_id = wp_get_post_parent_id($id);
+	    $args = array(
 		    'post_type'=>'page',
-		    'post_parent'=>get_the_ID(),
+		    'post_parent'=>$id,
 		    'posts_per_page'=>-1,
 		    'order'=>'ASC',
 		    'orderby'=>'menu_order'
 	    );
 	    $query = new WP_Query($args);
-	    if($query->have_posts()):?>
+	    if(!$query->have_posts()):
+            if($parent_id):
+                $args = array(
+                    'post_type'=>'page',
+                    'post_parent'=>$parent_id,
+                    'posts_per_page'=>-1,
+                    'order'=>'ASC',
+                    'orderby'=>'menu_order'
+                );
+                $query = new WP_Query($args);
+                if(!$query->have_posts()):
+                    $query = null;
+                endif;
+		    else:
+                $query = null;
+            endif;
+	    endif;?>
+        <?php if($query):?>
             <div class="sub-pages">
 			    <?php while($query->have_posts()):$query->the_post();?>
-				    <?php $image = get_field("sub_background_image");?>
+				    <?php $image = get_field("sub_background_image");
+				    $box_hover_copy = get_field("box_hover_copy");?>
                     <div class="outer-wrapper" <?php if($image): echo 'style="background-image: url('.$image['url'].');"'; endif;?>>
                         <a href="<?php echo get_the_permalink();?>">
                             <div class="inner-wrapper">
-                                <span>
+                                <div <?php if($box_hover_copy) echo 'class="no-rollover"';?>>
                                     <?php the_title();?>
-                                </span>
+                                </div>
+	                            <?php if($box_hover_copy):?>
+                                    <div class="rollover">
+                                        <?php echo $box_hover_copy;?>
+                                    </div>
+	                            <?php endif;?>
                             </div><!--.inner-wrapper-->
                         </a>
                     </div><!--.outer-wrapper-->

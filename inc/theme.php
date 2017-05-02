@@ -27,7 +27,6 @@ function loginpage_custom_link() {
 	return the_permalink();
 }
 add_filter('login_headerurl','loginpage_custom_link');
-
 /*-------------------------------------
 	Favicon.
 ---------------------------------------*/
