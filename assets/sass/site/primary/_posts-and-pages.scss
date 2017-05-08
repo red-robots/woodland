@@ -329,7 +329,7 @@
     }
   }
 }
-.template-page, .error-404, .template-sitemap {
+.template-page, .error-404, .template-sitemap, .template-our-people {
   >.row-1 {
     background-size: cover;
     background-position: center;
@@ -367,7 +367,7 @@
         font-size: 40px;
       }
     }
-    .copy {
+    >.copy {
       margin-top: 10px;
     }
     >.sub-pages {
@@ -465,6 +465,51 @@
                 font-size: 16px;
                 padding: 0 5%;
               }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+.template-our-people {
+  >.row-2 {
+    >.trustees {
+      margin-top: 20px;
+      h2 {
+        margin: 0 0 20px 0;
+        text-transform: uppercase;
+        color: $color__text-main;
+      }
+      >.trustees {
+        @include flexbox();
+        @include flexbox-align-content(stretch);
+        @include flexbox-align-items(stretch);
+        @include flexbox-justify(space-between);
+        @include flexbox-direction(column);
+        @media screen and (min-width: $tabwidth) {
+          @include flexbox-direction(row);
+          @include flexbox-wrap(wrap);
+        }
+        >.trustee {
+          @include flexbox-flex(0,1,auto);
+          margin: 10px 0;
+          &:first-child {
+            margin: 0 0 10px 0;
+          }
+          @media screen and (min-width: $tabwidth) {
+            width: 50%;
+            margin: 0;
+            &:first-child {
+              margin: 0;
+            }
+          }
+          >.wrapper {
+            @media screen and (min-width: $tabwidth) {
+              padding: 1%;
+            }
+            p {
+              margin: 0;
             }
           }
         }

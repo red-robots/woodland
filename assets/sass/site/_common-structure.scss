@@ -1,3 +1,10 @@
+.clear-bottom {
+  &:after {
+    content: "";
+    clear:both;
+    display: block;
+  }
+}
 .copy {
   font-size: 16px;
   color: $color__text-main;
@@ -24,7 +31,7 @@
     color: $color__text-main;
     position: relative;
     &:hover {
-      color: $color__text-main;
+      color: $color__woodland-blue;
     }
   }
   h1, h2, h3 {
@@ -402,4 +409,13 @@
       }
     }
   }
+}
+#primary .gform_wrapper .gform_footer .gform_button {
+  box-shadow: none;
+  border: none;
+  text-shadow: none;
+  background-color: $color__woodland-blue;
+  color: white;
+  padding: 10px 20px;
+  font-size: 20px;
 }
