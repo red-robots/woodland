@@ -166,6 +166,21 @@
             line-height: 1;
           }
         }
+        .facebook {
+          vertical-align: middle;
+          font-size: 15px;
+          color: $color__woodland-blue;
+          cursor: pointer;
+          margin: 10px auto 0 auto;
+          @media screen and (min-width: $tabwidth){
+            font-size: 25px;
+            display: inline-block;
+            margin: 0 0 0 10px;
+          }
+          i {
+            line-height: 1;
+          }
+        }
       }
       >.row-2 {
         text-align: center;

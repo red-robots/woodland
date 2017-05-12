@@ -14,34 +14,6 @@
 </div><!-- #content -->
 
 <footer id="colophon" class="site-footer" role="contentinfo">
-	<?php $facebook = get_field( "facebook_link", "option" );
-	$instagram      = get_field( "instagram_link", "option" );
-	$twitter        = get_field( "twitter_link", "option" );
-	$linkedin       = get_field( "linkedin_link", "option" );
-	if ( $twitter || $instagram || $facebook || $linkedin ):?>
-        <div class="row-1">
-			<?php if ( $facebook ): ?>
-                <a href="<?php echo $facebook; ?>" target="_blank">
-                    <i class="fa fa-facebook"></i>
-                </a>
-			<?php endif; ?>
-			<?php if ( $instagram ): ?>
-                <a href="<?php echo $instagram; ?>" target="_blank">
-                    <i class="fa fa-instagram"></i>
-                </a>
-			<?php endif; ?>
-			<?php if ( $twitter ): ?>
-                <a href="<?php echo $twitter; ?>" target="_blank">
-                    <i class="fa fa-twitter"></i>
-                </a>
-			<?php endif; ?>
-			<?php if ( $linkedin ): ?>
-                <a href="<?php echo $linkedin; ?>" target="_blank">
-                    <i class="fa fa-linkedin"></i>
-                </a>
-			<?php endif; ?>
-        </div><!--.row-1-->
-	<?php endif; ?>
     <div class="row-2">
         <div class="col-1">
 			<?php $title  = get_field( "contact_title", "option" );

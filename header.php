@@ -42,6 +42,12 @@
                     <div class="search">
                         <i class="fa fa-search"></i>
                     </div><!--.search-->
+                    <?php $facebook = get_field( "facebook_link", "option" );?>
+                    <?php if ( $facebook ): ?>
+                        <a class="facebook" href="<?php echo $facebook; ?>" target="_blank">
+                            <i class="fa fa-facebook"></i>
+                        </a>
+                    <?php endif; ?>
                 </div><!--.row-1-->
                 <div class="row-2">
 					<?php get_template_part( "template-parts/search", "form" ); ?>
