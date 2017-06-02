@@ -63,11 +63,11 @@
       width: 100%;
       @media screen and (min-width: $tabwidth){
         margin-top: 3%;
-        @include flexbox-direction(row);
-        @include flexbox-justify(center);
-        @include flex-wrap(wrap);
+        display: block;
       }
       @media screen and (min-width: $deskwidth){
+        @include flexbox;
+        @include flexbox-direction(row);
         @include flexbox-justify(space-between);
       }
       .outer-wrapper {
@@ -97,17 +97,19 @@
         }
         @media screen and (min-width: $tabwidth){
           min-width: 200px;
+          display: inline-block;
+          vertical-align: middle;
           margin: 2.5% 1/4*5% 0 1/4*5%;
-          width: 1/2*95%;
+          width: 1/2*93%;
           &:first-child {
             margin: 2.5% 1/4*5% 0 1/4*5%;
           }
         }
         @media screen and (min-width: $deskwidth){
           width: 1/3*92%;
-          margin: 4% 0 0 0;
+          margin: 0;
           &:first-child {
-            margin: 4% 0 0 0;
+            margin: 0;
           }
         }
         a {
@@ -381,11 +383,11 @@
       width: 100%;
       @media screen and (min-width: $tabwidth){
         margin-top: 10%;
-        @include flexbox-direction(row);
-        @include flexbox-justify(center);
-        @include flex-wrap(wrap);
+        display: block;
       }
       @media screen and (min-width: $deskwidth){
+        @include flexbox;
+        @include flexbox-direction(row);
         @include flexbox-justify(space-between);
 
       }
@@ -416,8 +418,10 @@
         }
         @media screen and (min-width: $tabwidth){
           min-width: 200px;
+          display: inline-block;
+          vertical-align: middle;
           margin: 2.5% 1/4*5% 0 1/4*5%;
-          width: 1/2*95%;
+          width: 1/2*93%;
           &:first-child {
             margin: 2.5% 1/4*5% 0 1/4*5%;
           }
