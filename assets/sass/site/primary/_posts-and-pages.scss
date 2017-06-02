@@ -69,6 +69,7 @@
         @include flexbox;
         @include flexbox-direction(row);
         @include flexbox-justify(space-between);
+        @include flexbox-wrap(wrap);
       }
       .outer-wrapper {
         width: 100%;
@@ -389,6 +390,7 @@
         @include flexbox;
         @include flexbox-direction(row);
         @include flexbox-justify(space-between);
+        @include flexbox-wrap(wrap);
 
       }
       .outer-wrapper {
