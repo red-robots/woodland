@@ -53,18 +53,6 @@ jQuery(document).ready(function ($) {
  		 });
 	});
 
-	/*
-	*
-	*	Smooth Scroll to Anchor
-	*
-	------------------------------------*/
-	 $('a').click(function(){
-	    $('html, body').animate({
-	        scrollTop: $('[name="' + $.attr(this, 'href').substr(1) + '"]').offset().top
-	    }, 500);
-	    return false;
-	});
-
 
 	
 	
@@ -89,5 +77,21 @@ jQuery(document).ready(function ($) {
        } else {
 	       $row_2.addClass("toggled-on");
        }
+    });
+	
+	$('a.popup').colorbox({
+		rel: 'gal',
+		inline: true,
+		width: '90%',
+		maxWidth: '960px',
+		close: '<i class="fa fa-times"></i>',
+		previous: '<i class="fa fa-chevron-left"></i>',
+		next: '<i class="fa fa-chevron-right"></i>'
+	});
+    $(window).on('resize', function () {
+        var width = window.innerWidth * 0.9 > 960 ? '960px' : '90%';
+        $.colorbox.resize({
+            width: width,
+        });
     });
 });// END #####################################    END

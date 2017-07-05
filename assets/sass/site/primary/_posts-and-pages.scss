@@ -481,7 +481,69 @@
   }
 }
 .template-our-people {
-  
+  >.row-2 {
+    >.staff {
+      margin-top: 20px;
+      padding: 0 20px;
+      @media screen and (min-width: $tabwidth) {
+        padding: 0 4%;
+      }
+      >header {
+        h2 {
+          margin: 0 0 20px 0;
+          text-transform: uppercase;
+          color: $color__text-main;
+        }
+      }
+      >.staff {
+        .member {
+          width: 100%;
+          margin: 20px 0;
+          @media screen and (min-width: $tabwidth) {
+            width: 1/2*96%;
+            margin: 1% 1% 0 1%;
+            float: left;
+          }
+          @media screen and (min-width: $deskwidth) {
+            width: 1/4*92%;
+          }
+          a {
+            display: block;
+            width: 100%;
+            text-decoration: none;
+            color: $color__text-main;
+            &:hover {
+              color: $color__text-main;
+            }
+            img {
+              width: 100%;
+              display: block;
+            }
+            header {
+              text-align: center;
+              h2 {
+                font-size: 18px;
+                @media screen and (min-width: $tabwidth) {
+                  font-size: 24px;
+                }
+              }
+            }
+            .title {
+              text-align: center;
+              font-size: 14px;
+              @media screen and (min-width: $tabwidth) {
+                font-size: 18px;
+              }
+
+            }
+          }
+          .hidden {
+            display: none;
+          }
+        }
+      }
+    }
+  }
 }
 .template-board {
   >.row-2 {
@@ -491,10 +553,12 @@
       @media screen and (min-width: $tabwidth) {
         padding: 0 5%;
       }
-      h2 {
-        margin: 0 0 20px 0;
-        text-transform: uppercase;
-        color: $color__text-main;
+      >header {
+        h2 {
+          margin: 0 0 20px 0;
+          text-transform: uppercase;
+          color: $color__text-main;
+        }
       }
       >.trustees {
         @include flexbox();

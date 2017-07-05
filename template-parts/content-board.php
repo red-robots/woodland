@@ -29,11 +29,11 @@
                 <?php the_content();?>
             </div><!--.copy-->
         <?php endif;?>
-        <div class="trustees">
+        <section class="trustees">
             <?php $trustees_header = get_field("trustees_header");
             $rows = get_field("trustees");
             if($trustees_header):?>
-                <h2><?php echo $trustees_header;?></h2>
+                <header><h2><?php echo $trustees_header;?></h2></header>
             <?php endif;
             if($rows):?>
                 <div class="trustees copy">
@@ -46,7 +46,7 @@
                     <?php endforeach;?>
                 </div><!--.trustees-->
             <?php endif;?>
-        </div><!--.trustees-->
+        </section><!--.trustees-->
 	    <?php $id = get_the_ID();
 	    $parent_id = wp_get_post_parent_id($id);
 	    $args = array(

@@ -29,24 +29,55 @@
                 <?php the_content();?>
             </div><!--.copy-->
         <?php endif;?>
-        <div class="trustees">
-            <?php $trustees_header = get_field("trustees_header");
-            $rows = get_field("trustees");
-            if($trustees_header):?>
-                <h2><?php echo $trustees_header;?></h2>
-            <?php endif;
-            if($rows):?>
-                <div class="trustees copy">
-                    <?php foreach($rows as $row):?>
-                        <div class="trustee">
-                            <div class="wrapper">
-                            <?php echo $row['trustee'];?>
-                            </div><!--.wrapper-->
-                        </div><!--.trustee-->
-                    <?php endforeach;?>
-                </div><!--.trustees-->
-            <?php endif;?>
-        </div><!--.trustees-->
+        <?php $staff_header = get_field("staff_header");
+        $args = array(
+            'post_type'=>'staff',
+            'posts_per_page'=>-1,
+		    'order'=>'ASC',
+		    'orderby'=>'menu_order'
+        );
+        $query = new WP_Query($args);
+        if($query->have_posts()):?>
+            <section class="staff">
+                <?php if($staff_header):?>
+                    <header><h2><?php echo $staff_header;?></h2></header>
+                <?php endif;?>
+                <div class="staff clear-bottom">
+                    <?php while($query->have_posts()):$query->the_post();
+                        $image = get_field("image");
+                        $title = get_field("title");?>
+                        <div class="member js-blocks">
+                            <a class="popup" href="#<?php echo sanitize_title_with_dashes(get_the_title());?>">
+                                <?php if($image):?>
+                                    <img src="<?php echo $image['sizes']['large'];?>" alt="<?php echo $image['alt'];?>">
+                                <?php endif;?>
+                                <header><h2><?php the_title();?></h2></header>
+                                <?php if($title):?>
+                                    <div class="title"><?php echo $title;?></div><!--.title-->
+                                <?php endif;?>
+                            </a>
+                            <div class="hidden">
+                                <div class="staff-member-popup clear-bottom" id="<?php echo sanitize_title_with_dashes(get_the_title());?>">
+                                    <div class="col-1">
+                                        <?php if($image):?>
+                                            <img src="<?php echo $image['sizes']['large'];?>" alt="<?php echo $image['alt'];?>">    
+                                        <?php endif;?>
+                                        <header><h2><?php the_title();?></h2></header>
+                                        <?php if($title):?>
+                                            <div class="title"><?php echo $title;?></div><!--.title-->
+                                        <?php endif;?>
+                                    </div><!--.col-1-->
+                                    <div class="col-2 copy">
+                                        <?php the_content();?>
+                                    </div><!--.col-2-->
+                                </div><!--####-->
+                            </div><!--.hidden-->
+                        </div><!--.member-->
+                    <?php endwhile;?>
+                </div><!--.staff-->
+            </section><!--.staff-->
+            <?php wp_reset_postdata();
+        endif;?>
 	    <?php $id = get_the_ID();
 	    $parent_id = wp_get_post_parent_id($id);
 	    $args = array(
