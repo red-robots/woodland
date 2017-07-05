@@ -332,7 +332,7 @@
     }
   }
 }
-.template-page, .error-404, .template-sitemap, .template-board, .template-search {
+.template-page, .error-404, .template-sitemap, .template-board, .template-search, .template-our-people {
   >.row-1 {
     background-size: cover;
     background-position: center;
@@ -479,6 +479,9 @@
       }
     }
   }
+}
+.template-our-people {
+  
 }
 .template-board {
   >.row-2 {
