@@ -929,7 +929,7 @@ html[xmlns] .flexslider .slides{display:block}
 .template-our-people>.row-2>.staff{margin-top:20px;padding:0 20px}
 @media screen and (min-width:600px){.template-our-people>.row-2>.staff{padding:0 4%}
 }@media screen and (min-width:600px){.template-our-people>.row-2>.staff>header{padding:0 1%}
-}.template-our-people>.row-2>.staff>header h2{margin:0 0 20px 0;text-transform:uppercase;color:#404040}
+}.template-our-people>.row-2>.staff>header h2{font-size:25px;margin:0 0 20px 0;text-transform:uppercase;color:#404040}
 .template-our-people>.row-2>.staff>.staff .member{width:100%;margin:20px 0}
 @media screen and (min-width:600px){.template-our-people>.row-2>.staff>.staff .member{width:48%;margin:1% 1% 0 1%;float:left}
 }@media screen and (min-width:1200px){.template-our-people>.row-2>.staff>.staff .member{width:23%}
@@ -944,7 +944,7 @@ html[xmlns] .flexslider .slides{display:block}
 }.template-our-people>.row-2>.staff>.staff .member .hidden{display:none}
 .template-board>.row-2>.trustees{margin-top:20px;padding:0 20px}
 @media screen and (min-width:600px){.template-board>.row-2>.trustees{padding:0 5%}
-}.template-board>.row-2>.trustees>header h2{margin:0 0 20px 0;text-transform:uppercase;color:#404040}
+}.template-board>.row-2>.trustees>header h2{font-size:25px;margin:0 0 20px 0;text-transform:uppercase;color:#404040}
 .template-board>.row-2>.trustees>.trustees{display:-webkit-box;display:-ms-flexbox;display:-webkit-flex;display:flex;-webkit-align-content:stretch;-ms-flex-line-pack:stretch;align-content:stretch;-webkit-align-items:stretch;-webkit-box-align:stretch;-ms-flex-align:stretch;align-items:stretch;-webkit-justify-content:space-between;-webkit-box-pack:justify;-ms-flex-pack:justify;justify-content:space-between;-webkit-flex-direction:column;-webkit-box-orient:vertical;-webkit-box-direction:normal;-ms-flex-direction:column;flex-direction:column}
 @media screen and (min-width:600px){.template-board>.row-2>.trustees>.trustees{-webkit-flex-direction:row;-webkit-box-orient:horizontal;-webkit-box-direction:normal;-ms-flex-direction:row;flex-direction:row;-webkit-flex-wrap:wrap;-ms-flex-wrap:wrap;flex-wrap:wrap}
 }.template-board>.row-2>.trustees>.trustees>.trustee{-webkit-box-flex:0 1 auto;-webkit-flex:0 1 auto;-ms-flex:0 1 auto;flex:0 1 auto;margin:10px 0}
