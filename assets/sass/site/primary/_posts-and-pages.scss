@@ -489,6 +489,9 @@
         padding: 0 4%;
       }
       >header {
+        @media screen and (min-width: $tabwidth) {
+          padding: 0 1%;
+        }
         h2 {
           margin: 0 0 20px 0;
           text-transform: uppercase;
