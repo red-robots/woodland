@@ -9,7 +9,7 @@
 
 ?>
 
-<article id="post-<?php the_ID(); ?>" <?php post_class("template-our-people"); ?>>
+<article id="post-<?php the_ID(); ?>" <?php post_class("template-board"); ?>>
 	<?php $image = get_field("row_1_image");
 	if($image):?>
         <div class="row-1 row-banner" <?php if($image): echo 'style="background-image: url('.$image['url'].');"'; endif;?>>
