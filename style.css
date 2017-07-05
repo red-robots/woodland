@@ -3501,7 +3501,7 @@ html[xmlns] .flexslider .slides {
       -webkit-box-pack: justify;
           -ms-flex-pack: justify;
               justify-content: space-between;
-      padding: 1% 5% 3% 5%; } }
+      padding: 1% 5% 2% 5%; } }
   #masthead > .row-1 > .col-1 {
     -webkit-box-flex: 0 1 auto;
     -webkit-flex: 0 1 auto;
