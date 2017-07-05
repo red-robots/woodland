@@ -77,7 +77,7 @@
     @media screen and (min-width: $tabwidth){
       @include flexbox-direction(row);
       @include flexbox-justify(space-between);
-      padding: 2% 5% 3% 5%;
+      padding: 1% 5% 3% 5%;
     }
     >.col-1 {
       @include flexbox-flex(0,1,auto);
@@ -136,7 +136,10 @@
                 }
                 &:hover {
                   text-decoration: none;
-                  color:inherit;
+                  color: $color__woodland-grey;
+                }
+                &.active {
+                  color: $color__woodland-grey;
                 }
               }
             }
@@ -303,7 +306,10 @@
               text-transform: uppercase;
               &:hover {
                 text-decoration: none;
-                color: inherit;
+                color: $color__woodland-blue;
+              }
+              &.active  {
+                color: $color__woodland-blue;
               }
             }
             &.sub-menu {
@@ -433,4 +439,24 @@
   color: white;
   padding: 10px 20px;
   font-size: 20px;
+}
+.button {
+  background-color: $color__woodland-medium-grey;
+  border-radius: 5px;
+  padding-bottom: 10px !important;
+  padding-right: 5px ;
+  display: inline-block;
+  .inner-wrapper {
+    background-color: $color__woodland-blue;
+    border-radius: 5px;
+    a {
+      color: white;
+      display: block;
+      text-decoration: none;
+      padding: 20px;
+      &:hover {
+        color: white;
+      }
+    }
+  }
 }

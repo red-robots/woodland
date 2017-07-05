@@ -332,7 +332,7 @@
     }
   }
 }
-.template-page, .error-404, .template-sitemap, .template-our-people {
+.template-page, .error-404, .template-sitemap, .template-our-people, .template-search {
   >.row-1 {
     background-size: cover;
     background-position: center;
@@ -484,6 +484,10 @@
   >.row-2 {
     >.trustees {
       margin-top: 20px;
+      padding: 0 20px;
+      @media screen and (min-width: $tabwidth) {
+        padding: 0 5%;
+      }
       h2 {
         margin: 0 0 20px 0;
         text-transform: uppercase;

@@ -45,14 +45,18 @@
                 <div class="row-2 clear-bottom">
 					<?php while ( $query->have_posts() ):$query->the_post(); ?>
 						<?php $image    = get_field( "sub_background_image" );
-						$box_hover_copy = get_field( "box_hover_copy" ); ?>
+						$box_hover_copy = get_field( "box_hover_copy" );
+						$second_line = get_field( "second_line" ); ?>
                         <div class="outer-wrapper js-blocks" <?php if ( $image ): echo 'style="background-image: url(' . $image['url'] . ');"'; endif; ?>>
                             <a href="<?php echo get_the_permalink(); ?>">
                                 <div class="inner-wrapper">
                                     <div <?php if ( $box_hover_copy ) {
 										echo 'class="no-rollover"';
 									} ?>>
-										<?php the_title(); ?>
+										<?php the_title(); ?><br>
+                                    	<?php if($second_line):
+											echo $second_line;
+										endif;?>
                                     </div>
 									<?php if ( $box_hover_copy ): ?>
                                         <div class="rollover">
