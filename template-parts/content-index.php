@@ -42,11 +42,11 @@
 			);
 			$query          = new WP_Query( $args );
 			if ( $query->have_posts() ):?>
-                <div class="row-2">
+                <div class="row-2 clear-bottom">
 					<?php while ( $query->have_posts() ):$query->the_post(); ?>
 						<?php $image    = get_field( "sub_background_image" );
 						$box_hover_copy = get_field( "box_hover_copy" ); ?>
-                        <div class="outer-wrapper" <?php if ( $image ): echo 'style="background-image: url(' . $image['url'] . ');"'; endif; ?>>
+                        <div class="outer-wrapper js-blocks" <?php if ( $image ): echo 'style="background-image: url(' . $image['url'] . ');"'; endif; ?>>
                             <a href="<?php echo get_the_permalink(); ?>">
                                 <div class="inner-wrapper">
                                     <div <?php if ( $box_hover_copy ) {
@@ -129,9 +129,9 @@
 			);
 			$query      = new WP_Query( $args );
 			if ( $query->have_posts() ):?>
-                <div class="row-2">
+                <div class="row-2 clear-bottom">
 					<?php while ( $query->have_posts() ):$query->the_post(); ?>
-                        <div class="outer-wrapper">
+                        <div class="outer-wrapper js-blocks">
                             <a href="<?php echo get_the_permalink(); ?>">
                                 <div class="inner-wrapper">
 									<?php the_title(); ?>
