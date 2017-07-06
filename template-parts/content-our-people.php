@@ -78,6 +78,12 @@
             </section><!--.staff-->
             <?php wp_reset_postdata();
         endif;?>
+        <?php $content_bottom = get_field("content_bottom"); 
+        if($content_bottom):?>
+            <div class="copy copy-2">
+                <?php echo $content_bottom;?>
+            </div><!--.copy-2-->
+        <?php endif;?>
 	    <?php $id = get_the_ID();
 	    $parent_id = wp_get_post_parent_id($id);
 	    $args = array(

@@ -811,18 +811,19 @@ html[xmlns] .flexslider .slides{display:block}
 .button .inner-wrapper{background-color:#085897;border-radius:5px}
 .button .inner-wrapper a{color:white;display:block;text-decoration:none;padding:20px}
 .button .inner-wrapper a:hover{color:white}
-.staff-member-popup{background-color:white;box-sizing:border-box;padding-top:60px}
-.staff-member-popup *{box-sizing:border-box}
-.staff-member-popup>.col-1{padding:20px}
-@media screen and (min-width:600px){.staff-member-popup>.col-1{width:50%;float:left;padding:2.5%}
+.staff-member-popup{background-color:white;box-sizing:border-box;padding:70px 20px 20px 20px}
+@media screen and (min-width:600px){.staff-member-popup{padding:70px 5% 5% 5%}
+}.staff-member-popup *{box-sizing:border-box}
+.staff-member-popup>.col-1{padding-bottom:20px}
+@media screen and (min-width:600px){.staff-member-popup>.col-1{width:50%;float:left;padding-right:2.5%}
 }.staff-member-popup>.col-1 img{display:block;width:80%;margin:0 auto}
 .staff-member-popup>.col-1 header{text-align:center}
 .staff-member-popup>.col-1 header h2{font-size:18px}
 @media screen and (min-width:600px){.staff-member-popup>.col-1 header h2{font-size:24px}
 }.staff-member-popup>.col-1 .title{text-align:center;font-size:14px}
 @media screen and (min-width:600px){.staff-member-popup>.col-1 .title{font-size:18px}
-}.staff-member-popup>.col-2{padding:20px;font-size:14px}
-@media screen and (min-width:600px){.staff-member-popup>.col-2{width:50%;float:left;padding:2.5%;font-size:16px}
+}.staff-member-popup>.col-2{font-size:14px}
+@media screen and (min-width:600px){.staff-member-popup>.col-2{width:50%;float:left;padding-left:2.5%;font-size:16px}
 }.template-index>.row-1{background-size:cover;background-position:center;position:relative;padding:30% 5% 5% 5%}
 @media screen and (min-width:600px){.template-index>.row-1{padding:30% 5% 5% 45%}
 }.template-index>.row-1 .copy{color:white;font-size:25px;font-weight:800;text-shadow:3px 3px 20px black}
@@ -942,6 +943,7 @@ html[xmlns] .flexslider .slides{display:block}
 }.template-our-people>.row-2>.staff>.staff .member a .title{text-align:center;font-size:14px}
 @media screen and (min-width:600px){.template-our-people>.row-2>.staff>.staff .member a .title{font-size:18px}
 }.template-our-people>.row-2>.staff>.staff .member .hidden{display:none}
+.template-our-people>.row-2>.copy-2{margin-top:20px}
 .template-board>.row-2>.trustees{margin-top:20px;padding:0 20px}
 @media screen and (min-width:600px){.template-board>.row-2>.trustees{padding:0 5%}
 }.template-board>.row-2>.trustees>header h2{font-size:25px;margin:0 0 20px 0;text-transform:uppercase;color:#404040}
