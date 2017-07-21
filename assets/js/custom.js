@@ -78,7 +78,7 @@ jQuery(document).ready(function ($) {
 	       $row_2.addClass("toggled-on");
        }
     });
-	if($('body.home').length>0||$('body.page-id-7').length>0||$('body.page-id-13').length>0){
+	if(($('body.home').length>0||$('body.page-id-7').length>0||$('body.page-id-13').length>0)&&$('#header-popup').length>0){
 		$.colorbox({
 			inline: true,
 			href: '#header-popup',
