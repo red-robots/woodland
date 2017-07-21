@@ -513,3 +513,42 @@
     }
   }
 }
+.hidden-popup {
+  display: none;
+}
+body.home, body.page-id-7, body.page-id-13 {
+  #cboxClose {
+    background-color: white;
+    right: 6px;
+    top: 6px;
+    border-radius: 0;
+  }
+}
+#header-popup {
+  background-color: $color__woodland-grey-rgba;
+  color: white;
+  border: 2px solid white;
+  padding: 70px 30px 30px 30px;
+  header {
+    border-bottom: 1px solid $color__woodland-gold;
+    padding-bottom: 10px;
+    h2 {
+      text-align: center;
+      font-weight: 700;
+      font-size: 40px;
+      color: white;
+      margin: 0;
+    }
+  }
+  .copy {
+    text-align: center;
+    margin: 20px 0 0 0;
+    color: white;
+    a {
+      color: white;
+      &:hover {
+        color: white;
+      }
+    }
+  }
+}

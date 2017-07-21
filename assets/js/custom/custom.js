@@ -78,20 +78,37 @@ jQuery(document).ready(function ($) {
 	       $row_2.addClass("toggled-on");
        }
     });
-	
-	$('a.popup').colorbox({
-		rel: 'gal',
-		inline: true,
-		width: '90%',
-		maxWidth: '1200px',
-		close: '<i class="fa fa-times"></i>',
-		previous: '<i class="fa fa-chevron-left"></i>',
-		next: '<i class="fa fa-chevron-right"></i>'
-	});
-    $(window).on('resize', function () {
-        var width = window.innerWidth * 0.9 > 1200 ? '1200px' : '90%';
-        $.colorbox.resize({
-            width: width,
-        });
-    });
+	if($('body.home').length>0||$('body.page-id-7').length>0||$('body.page-id-13').length>0){
+		$.colorbox({
+			inline: true,
+			href: '#header-popup',
+			width: '90%',
+			opacity: 0,
+			maxWidth: '600px',
+			close: '<i class="fa fa-times"></i>'
+		});
+		$(window).on('resize', function () {
+			var width = window.innerWidth * 0.9 > 600 ? '600px' : '90%';
+			$.colorbox.resize({
+				width: width,
+			});
+		});
+	}
+	if($('body.page-id-464').length>0){
+		$('a.popup').colorbox({
+			rel: 'gal',
+			inline: true,
+			width: '90%',
+			maxWidth: '1200px',
+			close: '<i class="fa fa-times"></i>',
+			previous: '<i class="fa fa-chevron-left"></i>',
+			next: '<i class="fa fa-chevron-right"></i>'
+		});
+		$(window).on('resize', function () {
+			var width = window.innerWidth * 0.9 > 1200 ? '1200px' : '90%';
+			$.colorbox.resize({
+				width: width,
+			});
+		});
+	}
 });// END #####################################    END

@@ -824,7 +824,15 @@ html[xmlns] .flexslider .slides{display:block}
 @media screen and (min-width:600px){.staff-member-popup>.col-1 .title{font-size:18px}
 }.staff-member-popup>.col-2{font-size:14px}
 @media screen and (min-width:600px){.staff-member-popup>.col-2{width:50%;float:left;padding-left:2.5%;font-size:16px}
-}.template-index>.row-1{background-size:cover;background-position:center;position:relative;padding:30% 5% 5% 5%}
+}.hidden-popup{display:none}
+body.home #cboxClose,body.page-id-7 #cboxClose,body.page-id-13 #cboxClose{background-color:white;right:6px;top:6px;border-radius:0}
+#header-popup{background-color:rgba(69,69,69,0.9);color:white;border:2px solid white;padding:70px 30px 30px 30px}
+#header-popup header{border-bottom:1px solid #98762c;padding-bottom:10px}
+#header-popup header h2{text-align:center;font-weight:700;font-size:40px;color:white;margin:0}
+#header-popup .copy{text-align:center;margin:20px 0 0 0;color:white}
+#header-popup .copy a{color:white}
+#header-popup .copy a:hover{color:white}
+.template-index>.row-1{background-size:cover;background-position:center;position:relative;padding:30% 5% 5% 5%}
 @media screen and (min-width:600px){.template-index>.row-1{padding:30% 5% 5% 45%}
 }.template-index>.row-1 .copy{color:white;font-size:25px;font-weight:800;text-shadow:3px 3px 20px black}
 @media screen and (min-width:600px){.template-index>.row-1 .copy{font-size:40px}

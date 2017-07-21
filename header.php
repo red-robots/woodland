@@ -22,7 +22,23 @@
 
 <body <?php body_class(); ?>>
 <div id="page" class="site">
-
+    <?php $active = get_field("popup_active","option");
+    if(strcmp($active,"yes")===0):?>
+        <div class="hidden-popup">
+            <?php $popup_header = get_field("popup_header","option");
+            $popup_text = get_field("popup_text","option");?>
+            <div id="header-popup">
+                <?php if($popup_header):?>
+                    <header><h2><?php echo $popup_header;?></h2></header>
+                <?php endif;
+                if($popup_text):?>
+                    <div class="copy">
+                        <?php echo $popup_text;?>
+                    </div><!--.copy-->
+                <?php endif;?>
+            </div><!--#header-popup-->
+        </div><!--.hidden-popup-->
+    <?php endif;?>
     <header id="masthead" class="site-header" role="banner">
         <div class="row-1">
             <div class="col-1">
