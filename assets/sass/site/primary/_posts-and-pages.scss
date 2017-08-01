@@ -233,6 +233,8 @@
   >.row-5 {
     padding: 20px 0;
     text-align: center;
+    background-size: cover;
+    background-position: center;
     @media screen and (min-width: $tabwidth) {
       padding: 8% 0;
     }
